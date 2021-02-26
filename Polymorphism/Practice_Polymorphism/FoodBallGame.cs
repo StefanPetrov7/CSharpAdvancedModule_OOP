@@ -5,7 +5,7 @@ namespace Practice_Polymorphism
 {
     public class FoodBallGame : Game
     {
-        private List<Player> team; // Encapsulation => games are vissible inly in this class.
+        private List<Player> team; // Encapsulation => games are vissible only in this class.
 
         public FoodBallGame()
         {
