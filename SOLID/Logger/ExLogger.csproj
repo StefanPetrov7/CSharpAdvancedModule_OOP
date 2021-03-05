@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Models\Contracts\" />
+    <Folder Include="Models\Layout\" />
+    <Folder Include="Models\Enumerations\" />
+    <Folder Include="Models\Errors\" />
+    <Folder Include="Models\Files\" />
+    <Folder Include="Models\PathManagment\" />
+    <Folder Include="Models\Appenders\" />
+    <Folder Include="Common\" />
+    <Folder Include="Models\IOManagment\" />
+    <Folder Include="Models\IOManagment\Contracts\" />
+    <Folder Include="Factories\" />
+    <Folder Include="Core\" />
+    <Folder Include="Core\Contracts\" />
+  </ItemGroup>
+</Project>
