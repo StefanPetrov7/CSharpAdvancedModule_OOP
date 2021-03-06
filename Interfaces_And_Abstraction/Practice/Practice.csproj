@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="IO Managment\" />
+    <Folder Include="Contracts\" />
+    <Folder Include="Models\" />
+    <Folder Include="Core\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Enumerations\" />
+    <Folder Include="IO Managment\Contracts\" />
+    <Folder Include="Factories\" />
+  </ItemGroup>
+</Project>
