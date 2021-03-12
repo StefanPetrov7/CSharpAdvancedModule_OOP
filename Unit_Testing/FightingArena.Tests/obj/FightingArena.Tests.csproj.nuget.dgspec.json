@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/stefanpetrov/Downloads/10. CSharp-OOP-Unit-Testing-Exercise-Skeleton/FightingArena.Tests/FightingArena.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/stefanpetrov/Downloads/10. CSharp-OOP-Unit-Testing-Exercise-Skeleton/FightingArena.Tests/FightingArena.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/stefanpetrov/Downloads/10. CSharp-OOP-Unit-Testing-Exercise-Skeleton/FightingArena.Tests/FightingArena.Tests.csproj",
+        "projectName": "FightingArena.Tests",
+        "projectPath": "/Users/stefanpetrov/Downloads/10. CSharp-OOP-Unit-Testing-Exercise-Skeleton/FightingArena.Tests/FightingArena.Tests.csproj",
+        "packagesPath": "/Users/stefanpetrov/.nuget/packages/",
+        "outputPath": "/Users/stefanpetrov/Downloads/10. CSharp-OOP-Unit-Testing-Exercise-Skeleton/FightingArena.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/stefanpetrov/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {
+              "/Users/stefanpetrov/Downloads/10. CSharp-OOP-Unit-Testing-Exercise-Skeleton/FightingArena/FightingArena.csproj": {
+                "projectPath": "/Users/stefanpetrov/Downloads/10. CSharp-OOP-Unit-Testing-Exercise-Skeleton/FightingArena/FightingArena.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.9.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.17.0, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.13.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/stefanpetrov/Downloads/10. CSharp-OOP-Unit-Testing-Exercise-Skeleton/FightingArena/FightingArena.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/stefanpetrov/Downloads/10. CSharp-OOP-Unit-Testing-Exercise-Skeleton/FightingArena/FightingArena.csproj",
+        "projectName": "FightingArena",
+        "projectPath": "/Users/stefanpetrov/Downloads/10. CSharp-OOP-Unit-Testing-Exercise-Skeleton/FightingArena/FightingArena.csproj",
+        "packagesPath": "/Users/stefanpetrov/.nuget/packages/",
+        "outputPath": "/Users/stefanpetrov/Downloads/10. CSharp-OOP-Unit-Testing-Exercise-Skeleton/FightingArena/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/stefanpetrov/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
