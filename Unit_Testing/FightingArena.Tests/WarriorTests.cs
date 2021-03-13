@@ -38,7 +38,7 @@ namespace FightingArena
         }
 
         [Test] // Attack Method
-        public void CannotAttackIfHpBeloqOrEqualThirty()
+        public void CannotAttackIfHpBelowOrEqualThirty()
         {
             this.warrior = new Warrior(NAME, 50, 30);
             Warrior attacked = new Warrior("Attacked", 30, 50);
