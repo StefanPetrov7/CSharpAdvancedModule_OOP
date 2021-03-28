@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Loggers\" />
+    <Folder Include="Appenders\" />
+    <Folder Include="Layouts\" />
+    <Folder Include="Layouts\Contracts\" />
+    <Folder Include="Appenders\Contracts\" />
+    <Folder Include="Loggers\Contracts\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Core\" />
+    <Folder Include="Core\Factories\" />
+  </ItemGroup>
+</Project>
