@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="Core\Contracts\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Entities\CommonContracts\" />
+    <Folder Include="Entities\Containers\" />
+    <Folder Include="Entities\Modules\" />
+    <Folder Include="Entities\Reactors\" />
+    <Folder Include="Entities\Containers\Contracts\" />
+    <Folder Include="Entities\Modules\Absorbing\" />
+    <Folder Include="Entities\Modules\Contracts\" />
+    <Folder Include="Entities\Modules\Energy\" />
+    <Folder Include="Entities\Modules\Absorbing\Contracts\" />
+    <Folder Include="Entities\Modules\Energy\Contracts\" />
+    <Folder Include="Entities\Reactors\Contracts\" />
+    <Folder Include="Entities\Reactors\Factories\" />
+    <Folder Include="Entities\Reactors\Factories\Contracts\" />
+    <Folder Include="IO\" />
+    <Folder Include="IO\Contracts\" />
+    <Folder Include="Units\" />
+  </ItemGroup>
+</Project>
