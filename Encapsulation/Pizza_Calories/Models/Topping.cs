@@ -19,7 +19,7 @@ namespace Pizza_Calories.Models
             { "sauce", 0.9 }
         };
 
-        private readonly Dictionary<string, string> TOPPING_NAMES = new Dictionary<string, string>
+        private readonly Dictionary<string, string> TOPPING_NAMES = new Dictionary<string, string>  // not needed
         {
             { "meat", "Meat"},
             { "veggies", "Veggies" },
