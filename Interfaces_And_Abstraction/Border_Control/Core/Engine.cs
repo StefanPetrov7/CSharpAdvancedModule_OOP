@@ -1,94 +1,60 @@
-﻿using System.Linq;
-using PersonInfo.Common;
-using PersonInfo.Contracts;
-using PersonInfo.Models;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Border_Control.Common;
+using Border_Control.Contracts;
+using Border_Control.Models;
 
-namespace PersonInfo.Core
+namespace Border_Control.Core
 {
     public class Engine
     {
-        private IList<IIdentifiable> idList;
-        private IList<IIdentifiable> detainedList;
-        private IList<IBirthable> bdList;
+        private IReader reader;
+        private IWriter writer;
+        private List<IIdNumerable> iDNumbers;
+        //private List<IBirthdays> birhdays;
 
-        public Engine()
+        public Engine(IWriter writer, IReader reader)
         {
-            this.idList = new List<IIdentifiable>();
-            this.detainedList = new List<IIdentifiable>();
-            this.bdList = new List<IBirthable>();
+            this.reader = reader;
+            this.writer = writer;
+            this.iDNumbers = new List<IIdNumerable>();
+            //this.birhdays = new List<IBirthdays>();
         }
 
-        public void RunTelephonyControl()
+        public void Run()
         {
             string input;
 
-            while ((input = Console.ReadLine()) != GlobConst.END_PROGRAM)
+            while ((input = reader.ReadLine()) != GlobalConstants.END_INPUT)
             {
-                string[] data = input.Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
+                string[] info = input.Split(' ').ToArray();
 
-                if (data.Length == 3)
+                if (info.Length == 3)
                 {
-                    IIdentifiable person = new Human(data[0], int.Parse(data[1]), data[2]);
-                    this.idList.Add(person);
+                    IIdNumerable human = new Citizen(info[0], int.Parse(info[1]), long.Parse(info[2]));
+                    iDNumbers.Add(human);
                 }
-                else
+                //else if (info[0] == "Pet")
+                //{
+                //    IBirthdays pet = new Pet(info[1], info[2]);
+                //    birhdays.Add(pet);
+                //}
+                else if (info.Length == 2)
                 {
-                    IIdentifiable robot = new Robot(data[0], data[1]);
-                    this.idList.Add(robot);
+                    IIdNumerable robot = new Robot(info[0], long.Parse(info[1]));
+                    iDNumbers.Add(robot);
                 }
             }
 
-            string validation = Console.ReadLine();
+            string num = reader.ReadLine();
 
-            foreach (var item in this.idList)
+            foreach (var unit in iDNumbers.Where(x => x.ID.ToString().EndsWith(num)))  // => can print by ID.
             {
-                string symbols = item.Id.Substring(item.Id.Length - validation.Length, validation.Length);
-
-                if (validation == symbols)
-                {
-                    this.detainedList.Add(item);
-                }
+                writer.WriteLine(unit.ID.ToString().TrimEnd());
             }
 
-            foreach (var item in this.detainedList)
-            {
-                Console.WriteLine(item.Id);
-            }
-        }
-
-        public void RunBirthdays()
-        {
-            string input;
-
-            while ((input = Console.ReadLine()) != GlobConst.END_PROGRAM)
-            {
-                string[] data = input.Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
-                string name = data[1];
-                string bd = data[data.Length - 1];
-
-                if (data[0] == "Citizen")
-                {
-                    IBirthable citizen = new Citizen(name, int.Parse(data[2]), data[3], bd);
-                    this.bdList.Add(citizen);
-                }
-                else if (data[0] == "Pet")
-                {
-                    IBirthable pet = new Pet(name, bd);
-                    this.bdList.Add(pet);
-                }
-            }
-
-            string date = Console.ReadLine();
-            this.bdList = bdList.Where(x => x.Birthdate.Substring(x.Birthdate.Length - date.Length, date.Length) == date).ToList();
-
-            if (this.bdList.Count > 0)
-            {
-                foreach (var item in this.bdList)
-                {
-                    Console.WriteLine(item.Birthdate);
-                }
-            }
+            //birhdays = birhdays.Where(x => x.Birthday.EndsWith(num)).ToList();
+            //birhdays.ForEach(x => writer.WriteLine(x.Birthday));
         }
     }
 }
-
