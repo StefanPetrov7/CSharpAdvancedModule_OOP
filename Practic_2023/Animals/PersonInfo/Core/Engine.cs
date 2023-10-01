@@ -9,14 +9,16 @@ namespace PersonInfo.Core
     {
         private IList<IIdentifiable> idList;
         private IList<IIdentifiable> detainedList;
+        private IList<IBirthable> bdList;
 
         public Engine()
         {
             this.idList = new List<IIdentifiable>();
             this.detainedList = new List<IIdentifiable>();
+            this.bdList = new List<IBirthable>();
         }
 
-        public void Run()
+        public void RunTelephonyControl()
         {
             string input;
 
@@ -52,9 +54,40 @@ namespace PersonInfo.Core
             {
                 Console.WriteLine(item.Id);
             }
+        }
 
+        public void RunBirthdays()
+        {
+            string input;
 
+            while ((input = Console.ReadLine()) != GlobConst.END_PROGRAM)
+            {
+                string[] data = input.Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
+                string name = data[1];
+                string bd = data[data.Length - 1];
 
+                if (data[0] == "Citizen")
+                {
+                    IBirthable citizen = new Citizen(name, int.Parse(data[2]), data[3], bd);
+                    this.bdList.Add(citizen);
+                }
+                else if (data[0] == "Pet")
+                {
+                    IBirthable pet = new Pet(name, bd);
+                    this.bdList.Add(pet);
+                }
+            }
+
+            string date = Console.ReadLine();
+            this.bdList = bdList.Where(x => x.Birthdate.Substring(x.Birthdate.Length - date.Length, date.Length) == date).ToList();
+
+            if (this.bdList.Count > 0)
+            {
+                foreach (var item in this.bdList)
+                {
+                    Console.WriteLine(item.Birthdate);
+                }
+            }
         }
     }
 }
