@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="IO\" />
+    <None Remove="Models\" />
+    <None Remove="Exceptios\" />
+    <None Remove="Contracts\" />
+    <None Remove="Common\" />
+    <None Remove="Core\" />
+    <None Remove="Factory\" />
+    <None Remove="Enumeration\" />
+    <None Remove="Models\Foods\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IO\" />
+    <Folder Include="Models\" />
+    <Folder Include="Exceptios\" />
+    <Folder Include="Contracts\" />
+    <Folder Include="Common\" />
+    <Folder Include="Core\" />
+    <Folder Include="Factory\" />
+    <Folder Include="Enumeration\" />
+    <Folder Include="Models\Foods\" />
+  </ItemGroup>
+</Project>
