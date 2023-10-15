@@ -4,6 +4,7 @@ namespace Raiding.Contracts
 	public interface IReader
 	{
 		string Read();
+		
 	}
 }
 
