@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Appenders\" />
+    <None Remove="Loggers\" />
+    <None Remove="Enumerations\" />
+    <None Remove="Core\" />
+    <None Remove="Core\Factories\" />
+    <None Remove="IO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Appenders\" />
+    <Folder Include="Loggers\" />
+    <Folder Include="Layouts\" />
+    <Folder Include="Enumerations\" />
+    <Folder Include="Core\" />
+    <Folder Include="Core\Factories\" />
+    <Folder Include="IO\" />
+  </ItemGroup>
+</Project>
